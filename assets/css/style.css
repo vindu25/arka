@@ -368,7 +368,7 @@ nav.navbar.shrink ul.dropdown-menu > li > a {
 
 .navbar-brand-centered img {
     position: absolute;
-    top: 0;
+    top: 45px;
     bottom: 0;
     left: 0;
     max-width: 160px;
@@ -2147,7 +2147,7 @@ button.list-group-item:hover {
     }
 
     .navbar-toggle {
-        display: block;
+        display: none;
     }
 
     .navbar-collapse.collapse {
@@ -2196,6 +2196,7 @@ button.list-group-item:hover {
     }
 
     .navbar-brand-centered img {
+        top: 5px;
         position: relative;
     }
 
@@ -2248,6 +2249,14 @@ button.list-group-item:hover {
 
     #quote {
         background-attachment: scroll;
+    }
+
+    .navbar-brand {
+        width: 100%;
+    }
+
+    .main-logo {
+        width: 25%;
     }
 
 }
