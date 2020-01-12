@@ -9,18 +9,18 @@ Version: 1.0
 $(document).ready(function() {
 
   //Countdown
-  
+
     $(function(){
 			$('#countdown').countdowntimer({
-			dateAndTime : "2019/06/19 19:00:00",  // <-- edit yyyy / mm / dd / time
+			dateAndTime : "2020/02/13 19:00:00",  // <-- edit yyyy / mm / dd / time
 			size : "lg",
 			// if the date has over 4 digits in days then add an extra [0-9] in the first field bellow
 			regexpMatchFormat: "([0-9][0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})",
 			regexpReplaceWith:  " <div class='count'> $1<div class='displayformat'>Days</div></div> <div class='count'> $2<div class='displayformat'>Hours</div></div> <div class='count'> $3<div class='displayformat'>Minutes</div></div> <div class='count'> $4<div class='displayformat'>Seconds</div></div>"
 			});
 	});
-	
-    //Smooth Scroll 
+
+    //Smooth Scroll
 
     $('.page-scroll a').on('click', function(event) {
         var $anchor = $(this);
@@ -29,7 +29,7 @@ $(document).ready(function() {
         }, 2500, 'easeInOutExpo');
         event.preventDefault();
     });
-	
+
     //	Back Top Link
 
     var offset = 200;
@@ -68,7 +68,7 @@ $(document).ready(function() {
         }
     });
 
- 
+
     $("#owl-attendants1,#owl-attendants2").owlCarousel({
         dots: true,
         loop: true,
@@ -91,40 +91,40 @@ $(document).ready(function() {
             },
         }
     });
- 
+
 }); // end document ready
 
 
 // Window scroll function
 
 $(window).scroll(function() {
-	
-	   // Shrink Navbar on Scroll 	
+
+	   // Shrink Navbar on Scroll
 
 	  if ($(document).scrollTop() > 50) {
 		$('nav').addClass('shrink');
 	  } else {
 		$('nav').removeClass('shrink');
 	  }
-	  
+
 });
 
 //On Click  function
 	$(document).on('click',function(){
-		
+
 		//Navbar toggle
 		$('.navbar .collapse').collapse('hide');
-		
-	})	
+
+	})
 
 // Window load function
 
 $(window).load(function() {
 
-    // Page Preloader 	
+    // Page Preloader
 
     $("#preloader").fadeOut("slow");
-	
+
     // Pretty Photo
 
     $("a[data-gal^='prettyPhoto']").prettyPhoto({
@@ -140,7 +140,7 @@ $(window).load(function() {
         /* light_rounded / dark_rounded / light_square / dark_square / facebook */
     });
 
-    //Isotope 
+    //Isotope
 
     var $container = $('#lightbox');
     $container.isotope({
@@ -163,16 +163,16 @@ $(window).load(function() {
     skrollr.init({
         smoothScrolling: true,
 		 smoothScrollingDuration: 1000,
-		forceHeight: false			
+		forceHeight: false
     });
 
     // disable skrollr if using handheld device
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         skrollr.init().destroy();
     }
-			
+
     //Isotope Nav Filter
-	
+
     $('.category a').on('click', function() {
         $('.category .active').removeClass('active');
         $(this).addClass('active');
@@ -188,9 +188,9 @@ $(window).load(function() {
         });
         return false;
     });
-	
+
 	//IE 11 Fix for shaky backgrounds
-	
+
 	 if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent) || (/Edge\/\d./i.test(navigator.userAgent)))
 		$('body').on("mousewheel", function() {
 			event.preventDefault();
