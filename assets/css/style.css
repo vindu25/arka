@@ -826,7 +826,7 @@ ul.polaroids li {
 #map-canvas, #map {
     max-width: 100%;
     margin-top: 30px;
-    min-height: 400px;
+    min-height: 330px;
 }
 
 /* =========================== Quote ============================ */
