@@ -1076,7 +1076,19 @@ footer {
 }
 
 /* =========================== Miscellaneous  ============================ */
-
+/* =========================== Audio ===================================== */
+#audio-control {
+    position: fixed;
+    right: 0;
+    top: 15rem;
+    border: 1px solid #c5bbd4;
+    width: 3rem;
+    padding: 1rem 4rem 1rem 1.5rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    box-shadow: 1px 1px 10px #757575;
+    background: #fcf2f9;
+    z-index: 1000;
+}
 /* Owl-carousel */
 
 .owl-carousel {
@@ -2258,7 +2270,6 @@ button.list-group-item:hover {
     .main-logo {
         width: 25%;
     }
-
 }
 
 /************ max width 767px *************/

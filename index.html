@@ -481,7 +481,7 @@
                      <div class="wedding col-lg-4 col-sm-6 col-md-6 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1118px, 0px, 0px);">
                         <div class="isotope-item">
                            <div class="gallery-thumb">
-                              <img class="img-responsive" src="assets/gallery/gal6.jpeg" alt="">
+                              <img class="img-responsive" src="assets/gallery/gal6.jpg" alt="">
                            </div>
                         </div>
                      </div>
@@ -529,6 +529,13 @@
       </section>
       <!-- /Section ends -->
 
+      <audio autoplay loop  id="playAudio" data-play="true">
+         <source src="assets/RomanticInspiration.mp3">
+      </audio>
+      <div id="audio-control">
+         <i class="audio-icon fa fa-pause fa-2x" aria-hidden="true"></i>
+      </div>
+
       <!-- Footer -->
       <footer>
          <div class="container">
@@ -569,6 +576,20 @@
       <script type="application/javascript">
          $(document).ready(function() {
             $(".owl-carousel").owlCarousel();
+            $("#audio-control").click(function () {
+               if ($("#playAudio").attr("data-play") === "true") {
+                  $("#playAudio").trigger("pause");
+                  $("#playAudio").attr("data-play", false);
+                  $(".audio-icon").removeClass("fa-pause");
+                  $(".audio-icon").addClass("fa-play");
+               } else {
+                  $("#playAudio").trigger("play");
+                  $("#playAudio").attr("data-play", true);
+                  $(".audio-icon").removeClass("fa-play");
+                  $(".audio-icon").addClass("fa-pause");
+               }
+            })
+
          });
       </script>
       <script>
@@ -584,6 +605,5 @@
          }
       </script>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOR0SCk67w2KJQOCHFPCIWoUcEqWX2Jng&callback=initMap"></script>
-
 </body>
 </html>
