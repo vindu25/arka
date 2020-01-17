@@ -529,9 +529,10 @@
       </section>
       <!-- /Section ends -->
 
-      <audio loop  id="playAudio" data-play="true">
+      <div id="aud-player"></div>
+      <!--<audio loop  id="playAudio" data-play="true">
          <source src="assets/RomanticInspiration.mp3">
-      </audio>
+      </audio>-->
       <div id="audio-control">
          <i class="audio-icon fa fa-pause fa-2x" aria-hidden="true"></i>
       </div>
@@ -576,7 +577,14 @@
       <script type="application/javascript">
          $(document).ready(function() {
             $(".owl-carousel").owlCarousel();
-            $("#playAudio").trigger("play");
+
+            var audio = document.createElement('audio');
+            audio.src = "assets/RomanticInspiration.mp3";
+            audio.id = "playAudio";
+            audio["data-play"] = "true";
+            document.getElementById("aud-player").appendChild(audio);
+            audio.play();
+
             $("#audio-control").click(function () {
                if ($("#playAudio").attr("data-play") === "true") {
                   $("#playAudio").trigger("pause");
